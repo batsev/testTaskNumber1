@@ -5,6 +5,7 @@
 body
     height: 100vh
     font-family: 'PT Sans', sans-serif
+    user-select: none
 
 .navbar
     position: fixed
@@ -22,9 +23,9 @@ body
         height: 8px
         border-radius: 50%
         border: 1px solid
-        border-color: rgb(113, 135, 133)
+        border-color: #232d2c
         &.active 
-            background-color: rgb(113, 135, 133)
+            background-color: #232d2c
             border-color: white
 
 .container
@@ -50,8 +51,7 @@ body
         color: white
         letter-spacing: 2px
     .fairPrice
-        padding-top: 80px
-        padding-bottom: 30px
+        margin-top: 10vh
         grid-column: span 12
         font-size: 70px
         letter-spacing: 3px
@@ -61,6 +61,7 @@ body
         color: white
         justify-self: center
     .domainInput
+        margin-top: 5vh
         grid-column: 3/11
         height: 70px
         border-radius: 10px
@@ -69,14 +70,15 @@ body
         align-items: center
         justify-content: space-between
         padding: 0 20px
-        
     .domainButton
-        background-color: grey
+        background-color: #455150
         border-radius: 10px
         color: white
         height: 50px
         width: 150px
         font-size: 18px
+        outline: none
+        border: none
     .myInput
         height: 50px
         width: 500px
@@ -86,18 +88,19 @@ body
         font-size: 18px
     .newAccount
         grid-column: 5/9
-        background-color: green
+        background-color: #2ec62b
         height:  60px
         color: white
         border: none
         border-radius: 5px
         font-size: 24px
-        margin: 30px
+        margin-top: 5vh
         font-weight: 700
+        outline: none
     .downImage
         grid-column: 6/8
-        padding-top: 110px
         justify-self: center
+        margin-top: 35vh
     .registerDomain
         grid-column: span 12
         font-size: 35px

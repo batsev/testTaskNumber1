@@ -60,7 +60,7 @@ $(".navbar ul li a").click(function() {
 $("#my-form").submit(function(e) {
   e.preventDefault();
   const textInput = $("#my-input").val();
-  console.log(textInput);
   $("#idFreedomain").slideDown(700);
   $("#idthisdomain").html(textInput);
+  $("#my-input").val("");
 });

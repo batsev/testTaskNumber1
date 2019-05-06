@@ -23,7 +23,8 @@ body {
     height: 8px;
     border-radius: 50%;
     border: 1px solid;
-    border-color: #232d2c; }
+    border-color: #232d2c;
+    background-color: white; }
     .navbar a.active {
       background-color: #232d2c;
       border-color: white; }
@@ -61,31 +62,42 @@ body {
     color: white;
     justify-self: center; }
   .wrapper .domainInput {
-    margin-top: 5vh;
-    grid-column: 3/11;
     height: 70px;
     border-radius: 10px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px; }
-  .wrapper .domainButton {
-    background-color: #455150;
-    border-radius: 10px;
+    position: relative;
+    z-index: 2; }
+    .wrapper .domainInput .myInput {
+      height: 50px;
+      width: 500px;
+      border: none;
+      outline: none;
+      margin-left: 30px;
+      font-size: 18px; }
+    .wrapper .domainInput .domainButton {
+      background-color: #455150;
+      border-radius: 10px;
+      color: white;
+      height: 50px;
+      width: 150px;
+      font-size: 18px;
+      outline: none;
+      border: none;
+      margin-right: 10px; }
+  .wrapper .freeDomain {
+    display: none;
+    position: relative;
+    z-index: 1;
+    background-color: #080c0b;
+    opacity: 0.7;
     color: white;
-    height: 50px;
-    width: 150px;
-    font-size: 18px;
-    outline: none;
-    border: none; }
-  .wrapper .myInput {
-    height: 50px;
-    width: 500px;
-    border: none;
-    outline: none;
-    margin-left: 30px;
-    font-size: 18px; }
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    padding: 15px 0;
+    margin-top: -10px; }
   .wrapper .newAccount {
     grid-column: 5/9;
     background-color: #2ec62b;
@@ -101,7 +113,8 @@ body {
     grid-column: 6/8;
     position: absolute;
     left: 50%;
-    bottom: 10vh; }
+    bottom: 10vh;
+    cursor: pointer; }
   .wrapper .registerDomain {
     grid-column: span 12;
     font-size: 35px;
@@ -110,10 +123,16 @@ body {
     padding: 50px 0;
     text-align: center; }
   .wrapper .redThousand {
+    margin-top: 5vh;
+    padding: 30px;
     grid-column: span 12;
     background-color: #ea3867;
-    font-size: 18px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: 80% 20%; }
+    .wrapper .redThousand .thousand {
+      font-size: 50px; }
   .wrapper .underline {
     text-decoration: underline; }
   .wrapper .featureboard {
@@ -125,6 +144,10 @@ body {
     text-align: center; }
     .wrapper .featureboard img {
       padding-bottom: 10px; }
+  .wrapper footer {
+    font-size: 0.8rem;
+    grid-column: span 12;
+    opacity: 0.8; }
 
 section {
   height: 100vh;

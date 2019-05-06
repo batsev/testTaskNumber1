@@ -31,13 +31,26 @@
           <div class="fairPrice">
             <span
               >Честная цена<br />
-              за домен .RU - 39Р</span
+              за домен .RU - 39₽</span
             >
           </div>
-          <div class="domainInput">
-            <input type="text" class="myInput" /><button class="domainButton">
-              Проверить
-            </button>
+          <div style="margin-top: 5vh; grid-column: 3/11;">
+            <form autocomplete="off" id="my-form" class="domainInput">
+              <input id="my-input" type="text" class="myInput" /><button
+                type="submit"
+                class="domainButton"
+              >
+                Проверить
+              </button>
+            </form>
+            <div id="idFreedomain" class="freeDomain">
+              <span
+                >Домен <span id="idthisdomain"></span> - свободен.
+                <a class="underline" style="color: #2ec62b"
+                  >Зарегистрировать за 39₽</a
+                ></span
+              >
+            </div>
           </div>
           <button class="newAccount">Создать аккаунт</button>
           <img class="downImage" src="task1-domains/down.png" />
@@ -114,15 +127,21 @@
           <div class="redThousand">
             <span
               >Вы получите <strong>1000 баллов</strong> в системе лояльности
-              <span class="underline">Джино.Плюсы</span>,зарегистрирововашись в
-              течении <strong>24 часов</strong>после посещения данной
-              страницы</span
+              <span class="underline">Джино.Плюсы</span
+              >,<br />зарегистрирововашись в течении
+              <strong>24 часов</strong> после посещения данной страницы</span
             >
             <div class="thousand">
-              <span>1000</span>
+              <div class="dash"></div>
+              <span style="font-weight: bold">1000</span>
               <img style="width: 30px" src="task1-domains/plus-bold.svg" />
             </div>
           </div>
+          <footer>
+            &copy; «‎Джино», 2003-2017. «‎Джино» является зарегестрированным
+            товарным знаком. Лицензия на телематические услуги связи № 97495 от
+            09.03.2012. <span class="underline">Правовая информация</span>.
+          </footer>
         </div>
       </section>
     </div>

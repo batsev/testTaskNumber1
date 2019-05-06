@@ -17,6 +17,15 @@ $(".navbar a").on("click", function(e) {
     );
   }
 });
+$(".downImage").on("click", function(e) {
+  e.preventDefault();
+  $("html, body").animate(
+    {
+      scrollTop: $("#features").offset().top
+    },
+    800
+  );
+});
 
 $(".navbar a").click(function() {
   $(".navbar ul li a").removeClass("active");
@@ -46,4 +55,12 @@ $(document)
 $(".navbar ul li a").click(function() {
   $(".navbar ul li a").removeClass("active");
   $(this).addClass("active");
+});
+
+$("#my-form").submit(function(e) {
+  e.preventDefault();
+  const textInput = $("#my-input").val();
+  console.log(textInput);
+  $("#idFreedomain").slideDown(700);
+  $("#idthisdomain").html(textInput);
 });

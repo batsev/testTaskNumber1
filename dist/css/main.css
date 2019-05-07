@@ -109,6 +109,12 @@ body {
     margin-top: 5vh;
     font-weight: 700;
     outline: none; }
+  .wrapper .featureInfo {
+    grid-column: span 12;
+    border-radius: 7px;
+    padding: 15px 30px;
+    background-color: #d9dbda;
+    border: 1px solid black; }
   .wrapper .downImage {
     grid-column: 6/8;
     position: absolute;

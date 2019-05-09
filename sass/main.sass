@@ -37,8 +37,6 @@ body
 .wrapper
     display: grid
     grid-template-columns: repeat(12, 1fr)
-    height: 100vh
-    grid-auto-rows: minmax(min-content, max-content)
     width: 90%
     margin: auto
     grid-column-gap: 12px
@@ -88,6 +86,10 @@ body
             outline: none
             border: none
             margin-right: 10px
+            transition: all 0.2s ease-in
+            cursor: pointer
+            &:hover
+                background-color: lighten(#455150, 5%)
     .freeDomain
         display: none
         position: relative
@@ -109,17 +111,74 @@ body
         font-size: 24px
         font-weight: 700
         outline: none
+        transition: all 0.2s ease-in
+        cursor: pointer
+        &:hover
+            background-color: lighten(#2ec62b, 5%)
     .downImage
         grid-column: 6/8
         justify-self: center
         cursor: pointer
     .featureInfo
         display: none
+        position: relative
         grid-column: span 12
         background-color: #eeeeee
         border: 1px solid #cccccc
         border-radius: 10px
         padding: 10px 15px
+        &.fi0:before, &.fi4:before
+            content: " "
+            position: absolute
+            left: 11%
+            top: -12px
+            width: 20px
+            height: 20px
+            border-top: 1px solid #ccc
+            border-left: 1px solid #ccc
+            border-right: 0px solid #ccc
+            border-bottom: 0px solid #ccc
+            background-color: #eee
+            transform: rotate(45deg)
+        &.fi1:before, &.fi5:before
+            content: " "
+            position: absolute
+            left: 36%
+            top: -12px
+            width: 20px
+            height: 20px
+            border-top: 1px solid #ccc
+            border-left: 1px solid #ccc
+            border-right: 0px solid #ccc
+            border-bottom: 0px solid #ccc
+            background-color: #eee
+            transform: rotate(45deg)
+        &.fi2:before, &.fi6:before
+            content: " "
+            position: absolute
+            left: 62%
+            top: -12px
+            width: 20px
+            height: 20px
+            border-top: 1px solid #ccc
+            border-left: 1px solid #ccc
+            border-right: 0px solid #ccc
+            border-bottom: 0px solid #ccc
+            background-color: #eee
+            transform: rotate(45deg)
+        &.fi3:before, &.fi7:before
+            content: " "
+            position: absolute
+            left: 87%
+            top: -12px
+            width: 20px
+            height: 20px
+            border-top: 1px solid #ccc
+            border-left: 1px solid #ccc
+            border-right: 0px solid #ccc
+            border-bottom: 0px solid #ccc
+            background-color: #eee
+            transform: rotate(45deg)
     .registerDomain
         grid-column: span 12
         font-size: 35px
@@ -131,17 +190,19 @@ body
         background-color: #ea3867
         border-radius: 10px
         font-size: 22px
+        align-items: center
         display: grid
-        grid-template-columns: 80% 20%
+        grid-template-columns: 75% 25%
         .thousand
             font-size: 50px
             display: inline-flex
             align-items: center
-            justify-content: space-around
+            justify-content: flex-start
             .vertical-line
+                margin-right: 70px
                 width: 1px
                 background-color: #f8f8f8
-                opacity: 0.3
+                opacity: 0.5
     .underline
         text-decoration: underline
     .featureboard

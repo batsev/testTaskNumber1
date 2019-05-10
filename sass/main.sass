@@ -7,6 +7,7 @@ body
     height: 100vh
     font-family: 'PT Sans', sans-serif
     user-select: none
+    //overflow: hidden
 
 .navbar
     position: fixed
@@ -33,6 +34,9 @@ body
 .container
     width: 100%
     height: 100%
+    // overflow-y: scroll
+    // scroll-snap-type: y mandatory
+    // scroll-behavior: smooth
 
 .wrapper
     display: grid
@@ -53,6 +57,7 @@ body
         letter-spacing: 2px
     .fairPrice
         grid-column: span 12
+        margin-top: 12vh
         font-size: 70px
         letter-spacing: 3px
         font-weight: bold
@@ -63,6 +68,7 @@ body
     .domainInput
         height: 70px
         border-radius: 10px
+        margin-top: 7vh
         background-color: white
         display: flex
         align-items: center
@@ -117,7 +123,9 @@ body
             background-color: lighten(#2ec62b, 5%)
     .downImage
         grid-column: 6/8
-        justify-self: center
+        position: absolute
+        bottom: 8vh
+        left: 50%
         cursor: pointer
     .featureInfo
         display: none
@@ -223,6 +231,7 @@ body
 section
     height: 100vh
     width: 100%
+    // scroll-snap-align: center
     &#checkDomain
         background: url("../task1-domains/background1.jpg") no-repeat center center/cover
     &#whyChoose

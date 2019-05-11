@@ -9,6 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"
+    />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Test1 Domains</title>
   </head>
@@ -47,7 +51,7 @@
               за домен .RU - 39₽</span
             >
           </div>
-          <div style="grid-column: 3/11;">
+          <div class="formWithDiv">
             <form autocomplete="off" id="my-form" class="domainInput">
               <input id="my-input" type="text" class="myInput" /><button
                 type="submit"
@@ -230,11 +234,8 @@
           <div class="registerDomain">
             <span>Почему стоит выбрать «‎Джино»?</span>
           </div>
-          <div
-            class="registerDomain"
-            style="font-size: 50px; line-height: 55px"
-          >
-            <span
+          <div class="registerDomain">
+            <span class="moreThan18"
               >«‎Джино» более 18 лет на рынке,<br />
               имеет 270000 довольных клиентов,<br />
               собственную панель управления<br />
@@ -250,7 +251,7 @@
               <strong>24 часов</strong> после посещения данной страницы</span
             >
             <div class="thousand">
-              <div class="vertical-line" style="height: 45px;"></div>
+              <div class="vertical-line"></div>
               <span style="font-weight: bold; margin-right: 10px;">1000</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

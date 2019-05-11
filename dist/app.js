@@ -48,6 +48,16 @@ $("#my-form").submit(function(e) {
   $("#my-input").val("");
 });
 
+// document.querySelector("#my-form").addEventListener("submit", e => {
+//   e.preventDefault();
+//   const textInput = document.querySelector("#my-input").value;
+//   document
+//     .querySelector("#idFreedomain")
+//     .classList.add("animated", "slideOutDown");
+//   document.querySelector("#idthisdomain").innerHTML = textInput;
+//   document.querySelector("#my-form").value = "";
+// });
+
 $(".fb0").click(function() {
   $(".featureInfo")
     .not($(".fi0"))

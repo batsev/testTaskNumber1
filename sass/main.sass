@@ -9,11 +9,51 @@ body
     user-select: none
     //overflow: hidden
 
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px
+
+// Small tablets (portrait view)
+$screen-md-min: 768px
+
+// Tablets and small desktops
+$screen-lg-min: 992px
+
+// Large tablets and desktops
+$screen-xl-min: 1200px
+
+// Small devices
+@mixin sm 
+   @media (max-width: #{$screen-sm-min}) 
+       @content
+   
+// Medium devices
+@mixin md 
+   @media (max-width: #{$screen-md-min}) 
+       @content
+   
+// Large devices
+@mixin lg 
+   @media (max-width: #{$screen-lg-min}) 
+       @content
+   
+// Extra large devices
+@mixin xl 
+   @media (max-width: #{$screen-xl-min}) 
+       @content;
+
+@mixin rwd($screen) 
+   @media (max-width: $screen+'px') 
+       @content
+
+
 .navbar
     position: fixed
     right: 0
     top: 50%
     z-index: 100
+    @include md
+        display: none
     ul
         list-style-type: none
         padding-right: 20px
@@ -45,16 +85,25 @@ body
     margin: auto
     grid-column-gap: 12px
     max-width: 1092px
-    min-width: 819px
     padding: 2% 0
+    @include lg
+        margin: 0 2rem 
     .logo
-        grid-column: span 2
+        grid-column: span 3
         color: white
+        @include rwd(614)
+            grid-column: span 6
     .onlyToday
         grid-column: 5/9
         justify-self: center
         color: white
         letter-spacing: 2px
+        @include rwd(614)
+            grid-column: span 6
+    .formWithDiv
+        grid-column: 3/11
+        @include md
+            grid-column: span 12
     .fairPrice
         grid-column: span 12
         margin-top: 12vh
@@ -65,6 +114,9 @@ body
         text-align: center
         color: white
         justify-self: center
+        @include rwd(705)
+            line-height: 50px
+            font-size: 50px
     .domainInput
         height: 70px
         border-radius: 10px
@@ -121,6 +173,8 @@ body
         cursor: pointer
         &:hover
             background-color: lighten(#2ec62b, 5%)
+        @include rwd(690)
+            font-size: 20px
     .downImage
         grid-column: 6/8
         position: absolute
@@ -193,6 +247,17 @@ body
         font-weight: bold
         justify-self: center
         text-align: center
+        @include rwd(710)
+            font-size: 25px
+        .moreThan18
+            font-size: 50px
+            line-height: 55px
+            @include lg
+                font-size: 40px
+                line-height: 45px
+            @include rwd(710)
+                font-size: 30px
+                line-height: 20px
     .redThousand
         grid-column: span 12
         background-color: #ea3867
@@ -201,16 +266,27 @@ body
         align-items: center
         display: grid
         grid-template-columns: 75% 25%
+        @include rwd(730)
+            grid-template-columns: 1fr
         .thousand
             font-size: 50px
             display: inline-flex
             align-items: center
             justify-content: flex-start
+            @include rwd(730)
+                display: none
             .vertical-line
                 margin-right: 70px
                 width: 1px
                 background-color: #f8f8f8
                 opacity: 0.5
+                height: 65px
+                @include lg
+                    margin-right: 10px
+                @include xl
+                    height: 65px
+                @include rwd(940)
+                    height: 100px
     .underline
         text-decoration: underline
     .featureboard
@@ -236,6 +312,9 @@ section
         background: url("../task1-domains/background1.jpg") no-repeat center center/cover
     &#whyChoose
         background: url("../task1-domains/background2.jpg") no-repeat center center/cover
+    &#features
+        @include sm
+            height: 125vh
         
 .white
     fill: white
